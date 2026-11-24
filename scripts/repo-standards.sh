@@ -22,7 +22,7 @@ gh api -X PATCH "$R" -f default_branch=dev \
 # Safe to re-run: updates a ruleset with the same name if it exists, creates it otherwise.
 ruleset() {
   local id method endpoint
-  id=$(gh api --paginate "$R/rulesets" --jq ".[] | select(.name == \"$1\") | .id" | head -n1)
+  id=$(gh api --paginate "$R/rulesets?includes_parents=false" --jq ".[] | select(.name == \"$1\") | .id" | head -n1)
   if [ -n "$id" ]; then method=PUT; endpoint="$R/rulesets/$id"; else method=POST; endpoint="$R/rulesets"; fi
   gh api -X "$method" "$endpoint" --silent --input - <<JSON
 {"name":"$1","target":"branch","enforcement":"active","bypass_actors":[],
