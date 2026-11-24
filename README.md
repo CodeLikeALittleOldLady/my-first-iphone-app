@@ -12,7 +12,7 @@ Every day, the app shows you every photo you took **on this day, across all your
 
 As you look, you flag the ones you no longer want: the twenty near-identical shots, the old screenshots, the blurry ones. Flagged photos are not deleted. They go into an album called **Cleanup Queue**.
 
-On December 31, you review the queue and clear it in one step.
+On December 31, you review the queue, save every flagged photo to a zip file, and only then clear it in one step. Nothing is destroyed without a copy.
 
 A little each day, and one decision at the end of the year.
 
@@ -22,11 +22,12 @@ A little each day, and one decision at the end of the year.
 |---|---|
 | Cleanup is one huge job you face once a year, so you avoid it | Cleanup is a few minutes a day, made while you still remember the moment |
 | Deleting happens in a hurry, one photo at a time | Deleting happens once, in December, with the whole year in view |
+| Once it's gone, it's gone | Everything deleted is saved to a zip first, just in case |
 | Miss a day and you lose track | Missed days wait for you in a catch-up list |
 
 ### Why build it when apps like this exist?
 
-There are plenty of photo cleaner apps with an "On This Day" feature. This one exists because building it is the lesson. It also has one deliberate twist: **flag all year, delete once.** Most cleaners delete as you swipe.
+There are plenty of photo cleaner apps with an "On This Day" feature. This one exists because building it is the lesson. It also has one deliberate twist: **flag all year, keep a copy, delete once.** Most cleaners delete as you swipe.
 
 ---
 
@@ -63,7 +64,8 @@ November 21 next year will include the photos you take this November 21, so it n
 | Decision | Why |
 |---|---|
 | Flag into an album instead of deleting | Safe, reversible, and syncs on its own |
-| Delete once, at year end, with the system confirmation | One deliberate decision instead of hundreds of hasty ones. Deleted photos stay in Recently Deleted for 30 days |
+| Export before delete: originals saved to a zip, checked, then deleted | Like a shredding bag, things wait before they are destroyed. If the export fails, nothing is deleted |
+| Delete once, at year end, with the system confirmation | One deliberate decision instead of hundreds of hasty ones. Deleted photos also stay in Recently Deleted for 30 days |
 | In non-leap years, February 28 also shows February 29 photos | Otherwise leap-day photos would only come up every four years |
 | Days with no photos mark themselves reviewed | They should never clutter the catch-up list |
 | Reminders are individual dated notifications | A repeating notification cannot skip the one day you already finished |
