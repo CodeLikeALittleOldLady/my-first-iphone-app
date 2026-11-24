@@ -14,23 +14,23 @@ As you look, you flag the ones you no longer want: the twenty near-identical sho
 
 Bursts and groups of near-identical photos taken close together appear as one stacked tile. Open it to swipe through the photos, pick your keepers, and flag the rest. A group is only a hint: nothing is flagged or deleted just because it belongs to one.
 
-At year end, a guided cleanup exports the flagged photos in smaller batches. Each batch is saved and checked before you are offered the choice to delete it, and you can stop and come back later. Nothing is destroyed without a verified copy.
+Whenever you are ready, a guided cleanup exports the flagged photos in smaller batches. By default, each batch is saved and checked before you are offered the choice to delete it, and you can stop and come back later. Year end is a suggested rhythm, not a deadline. Flags stay put until you remove them, so flagging for years without deleting anything is fine too.
 
-A little each day, and one deliberate cleanup at the end of the year.
+A little each day, and a deliberate cleanup when you choose.
 
 ### Before and after
 
 | Before | After |
 |---|---|
 | Cleanup is one huge job you face once a year, so you avoid it | Cleanup is a few minutes a day, made while you still remember the moment |
-| Deleting happens in a hurry, one photo at a time | Deleting happens in one deliberate year-end cleanup, batch by batch, with the whole year in view |
-| Once it's gone, it's gone | Every batch is saved and verified before you choose to delete it, just in case |
+| Deleting happens in a hurry, one photo at a time | Deleting happens only when you choose, batch by batch, with the whole picture in view |
+| Once it's gone, it's gone | By default, every batch is saved and verified before you can delete it, just in case |
 | Miss a day and you lose track | A calendar shows which days are reviewed, in progress, or waiting. No streaks, no guilt |
 | Twenty shots of the same sunset, scattered through the day | Bursts and near-identical shots shown together, so you choose the keepers |
 
 ### Why build it when apps like this exist?
 
-There are plenty of photo cleaner apps with an "On This Day" feature. This one exists because building it is the lesson. It also has one deliberate twist: **flag all year, keep a copy, then clean up deliberately.** Most cleaners delete as you swipe.
+There are plenty of photo cleaner apps with an "On This Day" feature. This one exists because building it is the lesson. It also has one deliberate twist: **flag freely, keep a copy, clean up deliberately.** Most cleaners delete as you swipe.
 
 ---
 
@@ -60,9 +60,11 @@ Each store has exactly one job:
 
 November 21 next year will include the photos you take this November 21, so it needs a fresh look. That is why the review log is keyed by year.
 
+The January 1 reset only affects review status. Your flags, backups, unfinished cleanups, and reminder settings all carry over.
+
 ### More state, still being designed
 
-The agreed design adds state beyond these two stores: where you left off, dates in progress, keeper choices within groups, and year-end batch progress. Where that state lives and how it syncs is still open ([#48](../../issues/48)), and so is how the yearly rollover works. Unfinished flags are never erased by a rollover.
+The agreed design adds state beyond these two stores: where you left off, dates in progress, keeper choices within groups, and cleanup batch progress. Where that state lives and how it syncs is still open ([#48](../../issues/48)).
 
 ---
 
@@ -71,12 +73,15 @@ The agreed design adds state beyond these two stores: where you left off, dates 
 | Decision | Why |
 |---|---|
 | Flag into an album instead of deleting | Safe, reversible, and syncs on its own |
-| Export before delete: originals saved, then verified | Like a shredding bag, things wait before they are destroyed. If an export fails, nothing in that batch is deleted. What "verified" means for each destination is still being investigated ([#47](../../issues/47)) |
+| Backup before delete, on by default: originals saved, then verified | Like a shredding bag, things wait before they are destroyed. If an export fails, nothing in that batch is deleted. What "verified" means for each destination is still being investigated ([#47](../../issues/47)) |
+| Backup can be turned off, but only in a Danger Zone setting with its own confirmation | It is your library. Deleting without a backup then warns you with the exact photo count before Apple's confirmation, and changing the setting never deletes anything by itself |
+| Cleanup anytime, no deadline | Year end is a suggestion. Flags stay until you remove them, with no pressure to delete |
 | Export in smaller, resumable batches | A whole year at once is large and fragile. Batches can be saved, checked, and resumed |
-| Delete each verified batch only by explicit choice, with the system confirmation | Exporting never deletes anything on its own. Deleted photos also stay in Recently Deleted for 30 days |
+| Delete only by explicit choice, with the system confirmation | Exporting never deletes anything on its own. Deleted photos also stay in Recently Deleted for 30 days |
 | February 29 is always its own date in the calendar | Leap-day photos stay reachable every year without being mixed into February 28 |
 | Show bursts and near-identical shots as one stack, with keeper selection, but never flag them automatically | Swiping through a group makes choosing easy, and the decision stays yours. How groups are detected is still being investigated ([#43](../../issues/43)) |
 | Days with no photos mark themselves reviewed, but only after a complete query | A failed load or limited photo access must never look like an empty day |
+| One reversible flag button per photo; Undo only for bulk actions | Flagging never jumps to another photo, mode, or date, so you always see what you just did |
 | "Done for today" only on today's date; "Day reviewed" on any other | The words should match the day you are actually looking at |
 | A calendar instead of a catch-up list | You can visit any day, in any order, without a backlog counting against you |
 | Reminders are individual dated notifications | A repeating notification cannot skip the one day you already finished |
@@ -86,15 +91,15 @@ The agreed design adds state beyond these two stores: where you left off, dates 
 
 ## Privacy
 
-The app has no server, no account, and no analytics, and it collects no data. Your photos only go where you send them: at year end, you choose where the exported batches are saved, such as a folder in Files or an attached drive. Finding groups of similar photos happens on your device.
+The app has no server, no account, and no analytics, and it collects no data. Your photos only go where you send them: when you clean up, you choose where the exported batches are saved, such as a folder in Files or an attached drive. Finding groups of similar photos happens on your device.
 
 ---
 
 ## Design
 
-The current design lives in [docs/design](docs/design). Start with the [design handoff](docs/design/DESIGN-HANDOFF.md), which records the agreed decisions and the questions that are still open. The six concept boards show the main screen, burst review, the calendar sheet, year-end batches, onboarding, and everyday states. The written decisions override any text or counts in the images.
+The current design lives in [docs/design](docs/design). Start with the [design handoff](docs/design/DESIGN-HANDOFF.md), which records the agreed decisions and the questions that are still open. The ten concept boards show the main screen, burst review, the calendar sheet, cleanup batches, onboarding, everyday states, Settings, the photo viewer, bulk selection, and photo access. The written decisions override any text, counts, or control styling in the images. [CHANGES-v2](docs/design/CHANGES-v2.md) lists what changed in revision 2.
 
-Still open: the Settings screen, yearly rollover, new photos arriving on a reviewed date, whether cleanup is available outside December 31, limited photo access, and export verification. See [#48](../../issues/48) and [#47](../../issues/47).
+Still open: new photos arriving on a reviewed date, manual completion under limited photo access, where extra state is stored, bulk Undo details, accessibility, and export verification. See [#48](../../issues/48) and [#47](../../issues/47).
 
 ---
 

@@ -1,5 +1,7 @@
-# Design package
+# Design package — revision 2
 
-Start with [DESIGN-HANDOFF.md](DESIGN-HANDOFF.md). This folder contains six current concept boards and the written decisions that govern them.
+Read [DESIGN-HANDOFF.md](DESIGN-HANDOFF.md). This full replacement package contains ten current concept boards. Copy this docs/design folder into the repository, replacing revision 1.
 
-Generated concept images contain illustrative copy/counts; see the handoff for corrections and unresolved behavior.
+Written decisions override generated illustrative text and counts. Board 04 shows the backup-required branch; backup bypass is separately specified in the handoff. Use the canonical main-screen toggle despite styling drift in later boards. No application code or repository issues were modified here.
+
+See [CHANGES-v2.md](CHANGES-v2.md) and [LOVELACE-PROMPT.md](LOVELACE-PROMPT.md).
