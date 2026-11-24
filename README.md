@@ -99,6 +99,8 @@ The app has no server, no account, and no analytics, and it collects no data. Yo
 
 The current design lives in [docs/design](docs/design). Start with the [design handoff](docs/design/DESIGN-HANDOFF.md), which records the agreed decisions and the questions that are still open. The ten concept boards show the main screen, burst review, the calendar sheet, cleanup batches, onboarding, everyday states, Settings, the photo viewer, bulk selection, and photo access. The written decisions override any text, counts, or control styling in the images. [CHANGES-v2](docs/design/CHANGES-v2.md) lists what changed in revision 2.
 
+A [usability, accessibility and App Review assessment](docs/design/USABILITY-ACCESSIBILITY-REVIEW.md) adds findings on destructive-action wording, large text, touch targets, VoiceOver, contrast, and submission preparation. Its recommendations are proposals until decided, and the next design session is planned in [#52](../../issues/52).
+
 Still open: new photos arriving on a reviewed date, manual completion under limited photo access, where extra state is stored, bulk Undo details, accessibility, and export verification. See [#48](../../issues/48) and [#47](../../issues/47).
 
 ---

@@ -230,3 +230,7 @@ Limited/denied access and refresh; permission-management capability requires eng
 
 ![10-photo-access.png](screens/10-photo-access.png)
 
+
+## Design review supplement
+
+See [USABILITY-ACCESSIBILITY-REVIEW.md](USABILITY-ACCESSIBILITY-REVIEW.md). It supplements this handoff with findings and recommendations; it does not override agreed behavior without an explicit subsequent decision.

@@ -10,3 +10,5 @@
 - Canonical segmented-control consistency explicitly required.
 - Four new boards added. Existing six retained with written caveats; earlier absolute backup rules superseded.
 - Remaining questions narrowed to implementation/verification details, new photos after completion, access capabilities, bulk edge cases and accessibility.
+
+- Added USABILITY-ACCESSIBILITY-REVIEW.md with prioritized findings, accessibility acceptance topics, official Apple sources and a next-session agenda; recommendations remain distinct from approved decisions.
