@@ -12,6 +12,8 @@ Every day, the app shows you every photo you took **on this day, across all your
 
 As you look, you flag the ones you no longer want: the twenty near-identical shots, the old screenshots, the blurry ones. Flagged photos are not deleted. They go into an album called **Cleanup Queue**.
 
+Bursts and groups of near-identical photos taken close together are tagged as groups, so you can review them side by side and choose which ones to flag. A group is only a hint: nothing is flagged or deleted just because it belongs to one.
+
 On December 31, you review the queue, save every flagged photo to a zip file, and only then clear it in one step. Nothing is destroyed without a copy.
 
 A little each day, and one decision at the end of the year.
@@ -24,6 +26,7 @@ A little each day, and one decision at the end of the year.
 | Deleting happens in a hurry, one photo at a time | Deleting happens once, in December, with the whole year in view |
 | Once it's gone, it's gone | Everything deleted is saved to a zip first, just in case |
 | Miss a day and you lose track | Missed days wait for you in a catch-up list |
+| Twenty shots of the same sunset, scattered through the day | Bursts and near-identical shots shown together, so you choose the keepers |
 
 ### Why build it when apps like this exist?
 
@@ -67,6 +70,7 @@ November 21 next year will include the photos you take this November 21, so it n
 | Export before delete: originals saved to a zip, checked, then deleted | Like a shredding bag, things wait before they are destroyed. If the export fails, nothing is deleted |
 | Delete once, at year end, with the system confirmation | One deliberate decision instead of hundreds of hasty ones. Deleted photos also stay in Recently Deleted for 30 days |
 | In non-leap years, February 28 also shows February 29 photos | Otherwise leap-day photos would only come up every four years |
+| Tag bursts and near-identical shots as groups, but never flag them automatically | Seeing them together makes choosing easy, and the decision stays yours. How groups are detected is still being investigated ([#43](../../issues/43)) |
 | Days with no photos mark themselves reviewed | They should never clutter the catch-up list |
 | Reminders are individual dated notifications | A repeating notification cannot skip the one day you already finished |
 | iPhone first | A Mac version can reuse the same core logic later |
@@ -75,7 +79,7 @@ November 21 next year will include the photos you take this November 21, so it n
 
 ## Privacy
 
-Your photos never leave your devices. The app has no server, no account, no analytics, and collects no data. The only things it writes are an album in your own Photos library and a small review log in your own iCloud.
+Your photos never leave your devices. The app has no server, no account, no analytics, and collects no data. The only things it writes are an album in your own Photos library, a small review log in your own iCloud, and, at year end, the zip file you choose to save. Finding groups of similar photos happens on your device.
 
 ---
 
